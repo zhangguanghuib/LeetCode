@@ -6,7 +6,6 @@ public class Solution {
 
 	private Stack<Integer> stack = new Stack<Integer>();
 	private List<List<Integer>> result;
-	//private boolean[] visited;
 
 	public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
 		//visited = new boolean[graph.length];
@@ -32,7 +31,7 @@ public class Solution {
 			result.add(list);
 		}
 		for(Integer j = 0; j<adj.length; ++j){
-			if(adj[i][j] != 0 /*&& visited[j] == false*/ && stack.contains(j)==false){
+			if(adj[i][j] != 0 && stack.contains(j)==false){
 				dfs(j, adj);
 			}
 		}
