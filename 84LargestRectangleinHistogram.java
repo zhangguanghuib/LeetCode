@@ -1,3 +1,15 @@
+/*
+ 单调栈
+针对每一个元素，求出其左边小于其的第一个元素元素和右边小于其的第一个元素， 着组成的矩形面积是
+(right-left-1)*h[i]
+
+如果左边不存在小于其的元素，则left=-1
+如果右边不纯在小于其的元素， 则right = n
+
+举个例子: 5左边小于他的是1，右边小于他的是2， 下表left =1, right=4, 则面积（4-1-1）*5 = 10.
+
+*/
+
 package P84LargestRectangleInHistogram;
 
 import java.util.Stack;
